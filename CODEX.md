@@ -12,6 +12,7 @@
 - Executed linting and production builds to validate the codebase; addressed Turbopack panic (switching to the stable Webpack build) and Google Fonts network errors by self-hosting fonts.
 - Curated a repository-friendly `.gitignore` to exclude transient build artifacts and local tooling caches.
 - Resized the hero contact card to tighten vertical rhythm and remove excess negative space under the contact details.
+- Refined the header for mobile: introduced a compact call button plus slide-down menu to prevent layout squishing on small screens.
 
 ## File & Module Notes
 - `package.json` / `package-lock.json`
