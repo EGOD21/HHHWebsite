@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+:root {
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: "Inter Variable", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", ui-monospace, "Menlo", "Monaco",
+    "Consolas", "Liberation Mono", "Courier New", monospace;
+  --color-brand: #ef4444;
+  --color-brand-muted: #f87171;
+  --color-surface: rgba(12, 12, 14, 0.75);
+  --color-border: rgba(255, 255, 255, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background: radial-gradient(circle at top, rgba(239, 68, 68, 0.12), #050506);
+  color: #f9fafb;
+}
+
+a {
+  color: inherit;
+}
