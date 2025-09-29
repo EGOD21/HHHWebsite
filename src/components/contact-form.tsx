@@ -23,7 +23,8 @@ export function ContactForm() {
       return;
     }
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
     try {
       setStatus("submitting");
@@ -40,7 +41,7 @@ export function ContactForm() {
         setMessage(
           "Thank you! Your message is on its way. We'll follow up within one business day."
         );
-        event.currentTarget.reset();
+        form.reset();
       } else {
         throw new Error(`Request failed with status ${response.status}`);
       }
