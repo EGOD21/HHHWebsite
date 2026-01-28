@@ -8,10 +8,10 @@ import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 const navItems = [
-  { href: "#services", label: "Services" },
-  { href: "#values", label: "Our Promise" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
+  { href: "/services", label: "Services" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -28,19 +28,19 @@ export function Header() {
   return (
     <header className="sticky inset-x-0 top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 text-sm sm:text-base">
-        <Link href="#top" className="flex items-center gap-3" onClick={closeMobileMenu}>
-          <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-full border border-white/20 bg-white/10">
+        <Link href="/" className="flex items-center gap-3 group" onClick={closeMobileMenu}>
+          <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-black via-red-950/20 to-black border-2 border-white/30 ring-2 ring-red-500/20 shadow-[0_0_20px_rgba(239,68,68,0.5)] group-hover:shadow-[0_0_30px_rgba(239,68,68,0.8)] transition-all duration-300">
             <Image
               src="/hhh-logo.png"
-              alt="Highlands HandyHelp logo"
+              alt="Godwin Repair and Construction logo"
               fill
-              sizes="40px"
+              sizes="56px"
               className="object-contain"
               priority
             />
           </div>
-          <span className="font-semibold tracking-tight text-white">
-            {siteConfig.name}
+          <span className="hidden text-lg font-semibold sm:block">
+            Godwin Repair
           </span>
         </Link>
         <nav className="hidden items-center gap-6 lg:flex">

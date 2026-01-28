@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 
 import "./globals.css";
 
-const baseUrl = "https://www.highlandshandyhelp.com";
+const baseUrl = "https://www.godwinrepair.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -16,9 +16,11 @@ export const metadata: Metadata = {
   keywords: [
     "handyman",
     "home repair",
-    "Highlands College",
-    "Highlands HandyHelp",
-    "student handyman",
+    "Godwin Repair",
+    "construction",
+    "remodeling",
+    "Springfield Missouri handyman",
+    "professional handyman",
   ],
   openGraph: {
     title: `${siteConfig.name} | Handyman Services with Purpose`,

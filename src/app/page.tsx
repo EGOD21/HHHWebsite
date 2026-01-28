@@ -17,16 +17,12 @@ const serviceIconMap: Record<ServiceIcon, LucideIcon> = {
 
 const highlights = [
   {
-    label: "Student-led craftsmanship",
-    detail: "A vetted team of Highlands College students you can trust in your home.",
+    label: "Professional service",
+    detail: "Expert craftsmanship you can trust in your home.",
   },
   {
     label: "Flexible scheduling",
-    detail: "Transparent communication before, during, and after every project.",
-  },
-  {
-    label: "Wholehearted service",
-    detail: "We bring excellence, integrity, and care to every repair and improvement.",
+    detail: "Book appointments that fit your timeline.",
   },
 ];
 
@@ -39,13 +35,13 @@ export default function Home() {
         <section className="grid gap-12 md:grid-cols-[1.2fr_1fr]">
           <div className="space-y-8">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white/80">
-              Highlands students at your service
+              Professional service with purpose
             </span>
             <h1 className="text-balance text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl">
               Hands-on help delivered with excellence, integrity, and heart.
             </h1>
             <p className="max-w-2xl text-lg text-white/70">
-              Highlands HandyHelp LLC provides professional handyman services for homes, ministries, and small businesses. We combine skilled work with responsive communication so you can check projects off the list with confidence.
+              Godwin Repair and Construction provides professional handyman services for homes, ministries, and small businesses. We combine skilled work with responsive communication so you can check projects off the list with confidence.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -88,7 +84,7 @@ export default function Home() {
                 <div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-white/20 bg-black/30">
                   <Image
                     src="/hhh-logo.png"
-                    alt="Highlands HandyHelp logo"
+                    alt="Godwin Repair and Construction logo"
                     fill
                     sizes="64px"
                     className="object-contain"
@@ -191,7 +187,7 @@ export default function Home() {
               </p>
               <h2 className="text-3xl font-semibold sm:text-4xl">Workmanship that reflects our faith</h2>
               <p className="text-base text-white/80">
-                Highlands HandyHelp LLC began as a team of Highlands College students using their practical skills to serve the community. Every project is approached as ministry in action—meeting tangible needs while displaying the love of Christ through dependable work and genuine care.
+                Godwin Repair and Construction serves the community with practical skills and genuine care. Every project is approached with excellence—meeting needs while displaying integrity and dependable work.
               </p>
             </div>
             <div className="space-y-6 rounded-3xl border border-white/10 bg-black/40 p-6 text-sm text-white/70 shadow-xl shadow-black/40">

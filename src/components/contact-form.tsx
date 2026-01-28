@@ -95,10 +95,11 @@ export function ContactForm() {
             name="service"
             className="h-11 rounded-xl border border-white/10 bg-black/40 px-4 text-base text-white outline-none transition focus:border-white/40 focus:bg-black/60"
           >
+            <option value="">Select project type</option>
             <option value="General Repairs">General Repairs</option>
-            <option value="Assembly & Installations">Assembly & Installations</option>
-            <option value="Outdoor Projects">Outdoor Projects</option>
-            <option value="Custom Request">Custom Request</option>
+            <option value="Remodelling">Remodelling</option>
+            <option value="Upscale Projects">Upscale Projects</option>
+            <option value="Other">Other</option>
           </select>
         </label>
       </div>
