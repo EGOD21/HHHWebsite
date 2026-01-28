@@ -31,7 +31,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-3 group" onClick={closeMobileMenu}>
           <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-black via-red-950/20 to-black border-2 border-white/30 ring-2 ring-red-500/20 shadow-[0_0_20px_rgba(239,68,68,0.5)] group-hover:shadow-[0_0_30px_rgba(239,68,68,0.8)] transition-all duration-300">
             <Image
-              src="/hhh-logo.png"
+              src="/hhh-logo.jpeg"
               alt="Godwin Repair and Construction logo"
               fill
               sizes="56px"

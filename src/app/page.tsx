@@ -83,7 +83,7 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 <div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-white/20 bg-black/30">
                   <Image
-                    src="/hhh-logo.png"
+                    src="/hhh-logo.jpeg"
                     alt="Godwin Repair and Construction logo"
                     fill
                     sizes="64px"
