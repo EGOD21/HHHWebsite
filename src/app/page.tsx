@@ -85,7 +85,7 @@ export default function Home() {
               {/* Large Logo */}
               <div className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl bg-black/60 border border-white/10">
                 <Image
-                  src="/image0.jpeg"
+                  src="/image0.svg"
                   alt="Godwin Repair and Construction"
                   fill
                   sizes="(max-width: 768px) 100vw, 400px"

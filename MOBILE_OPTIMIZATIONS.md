@@ -6,7 +6,7 @@
 
 **Location**: Homepage hero section (right side)
 - **Replaced**: Small mission card with large logo display
-- **Logo**: `/public/image0.jpeg` now prominently displayed
+- **Logo**: `/public/image0.svg` now prominently displayed
 - **Features**:
   - 16:9 aspect ratio container
   - Black background with subtle glow effect
@@ -197,7 +197,7 @@ Route (app)                  Size    First Load JS
 5. `/public/gallery/` - All placeholder SVGs created
 
 ### New Assets:
-- `/public/image0.jpeg` - Large logo (already provided by client)
+- `/public/image0.svg` - Large logo (already provided by client)
 - `/public/gallery/placeholder-*.svg` - 6 placeholder images
 
 ---
