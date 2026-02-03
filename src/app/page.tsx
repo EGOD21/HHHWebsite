@@ -31,19 +31,19 @@ export default function Home() {
     <div id="top" className="min-h-screen bg-gradient-to-br from-[#050506] via-[#15060a] to-[#020102] text-white">
       <div className="pointer-events-none fixed inset-x-0 top-0 -z-10 mx-auto h-[40rem] max-w-5xl bg-[radial-gradient(circle,_rgba(255,0,0,0.15)_0%,_rgba(15,0,0,.0)_65%)]" />
       <Header />
-      <main className="mx-auto flex w-full max-w-6xl flex-col gap-24 px-4 pb-24 pt-20 md:pt-28">
-        <section className="grid gap-12 md:grid-cols-[1.2fr_1fr]">
-          <div className="space-y-8">
+      <main className="mx-auto flex w-full max-w-6xl flex-col gap-16 md:gap-24 px-4 pb-24 pt-16 md:pt-28">
+        <section className="grid gap-8 md:gap-12 lg:grid-cols-[1.2fr_1fr]">
+          <div className="space-y-6 md:space-y-8">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white/80">
               Professional service with purpose
             </span>
-            <h1 className="text-balance text-4xl font-semibold leading-tight sm:text-5xl md:text-6xl">
+            <h1 className="text-balance text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
               Hands-on help delivered with excellence, integrity, and heart.
             </h1>
-            <p className="max-w-2xl text-lg text-white/70">
+            <p className="max-w-2xl text-base md:text-lg text-white/70">
               Godwin Repair and Construction provides professional handyman services for homes, ministries, and small businesses. We combine skilled work with responsive communication so you can check projects off the list with confidence.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
               <a
                 href={`tel:${siteConfig.contact.phone}`}
                 className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-red-600 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-red-900/50 transition hover:from-red-400 hover:to-red-500"
@@ -63,11 +63,11 @@ export default function Home() {
                 Explore Services
               </Link>
             </div>
-            <dl className="grid gap-6 sm:grid-cols-2">
+            <dl className="grid gap-4 md:gap-6 sm:grid-cols-2">
               {highlights.map((item) => (
                 <div
                   key={item.label}
-                  className="rounded-2xl border border-white/10 bg-black/30 p-6 shadow-xl shadow-black/30"
+                  className="rounded-2xl border border-white/10 bg-black/30 p-5 md:p-6 shadow-xl shadow-black/30"
                 >
                   <dt className="text-sm font-semibold uppercase tracking-wide text-red-300">
                     {item.label}
@@ -77,36 +77,45 @@ export default function Home() {
               ))}
             </dl>
           </div>
-          <aside className="relative w-full max-w-md self-start overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/40 backdrop-blur">
-            <div className="absolute inset-y-0 right-[-30%] h-full w-[70%] bg-gradient-to-br from-red-500/40 to-transparent blur-3xl" />
-            <div className="relative flex flex-col gap-4">
-              <div className="flex items-center gap-4">
-                <div className="relative h-16 w-16 overflow-hidden rounded-2xl border border-white/20 bg-black/30">
-                  <Image
-                    src="/hhh-logo.jpeg"
-                    alt="Godwin Repair and Construction logo"
-                    fill
-                    sizes="64px"
-                    className="object-contain"
-                  />
-                </div>
-                <div>
-                  <p className="text-sm uppercase tracking-[0.3em] text-white/60">Mission</p>
-                  <p className="text-lg font-semibold text-white">Serve with Heart</p>
-                </div>
+
+          {/* Large Logo Display */}
+          <aside className="relative w-full max-w-md mx-auto lg:mx-0 self-start overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-black/80 via-red-950/20 to-black/80 p-8 md:p-10 shadow-2xl shadow-red-900/20 backdrop-blur">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(239,68,68,0.15)_0%,_transparent_70%)]" />
+            <div className="relative flex flex-col gap-6">
+              {/* Large Logo */}
+              <div className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl bg-black/60 border border-white/10">
+                <Image
+                  src="/image0.jpeg"
+                  alt="Godwin Repair and Construction"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-contain p-4"
+                  priority
+                />
               </div>
-              <p className="text-sm leading-relaxed text-white/70">{siteConfig.mission}</p>
-              <div className="rounded-2xl border border-white/10 bg-black/40 p-4 text-sm italic text-white/80">
-                {siteConfig.scripture}
+
+              {/* Mission Statement */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="h-1 w-12 bg-gradient-to-r from-red-500 to-transparent rounded-full" />
+                  <p className="text-xs uppercase tracking-[0.3em] text-red-300">Our Mission</p>
+                </div>
+                <p className="text-sm leading-relaxed text-white/80">{siteConfig.mission}</p>
               </div>
-              <div className="space-y-2 text-sm text-white/70">
-                <p className="text-xs uppercase tracking-[0.2em] text-white/50">
-                  Contact
-                </p>
-                <a href={`tel:${siteConfig.contact.phone}`} className="block font-semibold text-white">
+
+              {/* Quick Contact */}
+              <div className="rounded-2xl border border-white/10 bg-black/40 p-4 space-y-2">
+                <p className="text-xs uppercase tracking-[0.2em] text-white/50">Quick Contact</p>
+                <a
+                  href={`tel:${siteConfig.contact.phone}`}
+                  className="block text-base font-semibold text-white hover:text-red-400 transition"
+                >
                   {siteConfig.contact.phone}
                 </a>
-                <a href={`mailto:${siteConfig.contact.email}`} className="block font-semibold text-white">
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="block text-xs text-white/70 hover:text-red-400 transition break-all"
+                >
                   {siteConfig.contact.email}
                 </a>
               </div>
@@ -114,39 +123,39 @@ export default function Home() {
           </aside>
         </section>
 
-        <section id="services" className="space-y-10">
+        <section id="services" className="space-y-8 md:space-y-10">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl space-y-3">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-red-300">
                 How we can help
               </p>
-              <h2 className="text-3xl font-semibold sm:text-4xl">Full-service handyman solutions</h2>
-              <p className="text-base text-white/70">
+              <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl">Full-service handyman solutions</h2>
+              <p className="text-sm md:text-base text-white/70">
                 From quick fixes to multi-day projects, we tailor our approach to your to-do list. Each visit includes a clean workspace, respectful communication, and a clear summary of the work completed.
               </p>
             </div>
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-3 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-3 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10 whitespace-nowrap"
             >
               Schedule a walkthrough
             </Link>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-5 md:gap-6 sm:grid-cols-2">
             {siteConfig.services.map((service) => {
               const Icon = serviceIconMap[service.icon];
               return (
                 <div
                   key={service.title}
-                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-black/40 p-8 shadow-lg shadow-black/40 transition hover:border-red-400/40"
+                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-black/40 p-6 md:p-8 shadow-lg shadow-black/40 transition hover:border-red-400/40"
                 >
                   <div className="absolute -right-10 top-1/2 h-32 w-32 -translate-y-1/2 rounded-full bg-gradient-to-br from-red-500/20 to-transparent blur-3xl transition duration-500 group-hover:from-red-400/30" />
-                  <div className="relative flex flex-col gap-4">
+                  <div className="relative flex flex-col gap-3 md:gap-4">
                     <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500/20 text-red-200">
                       <Icon className="h-5 w-5" />
                     </span>
-                    <h3 className="text-xl font-semibold">{service.title}</h3>
-                    <p className="text-sm text-white/70">{service.description}</p>
+                    <h3 className="text-lg md:text-xl font-semibold">{service.title}</h3>
+                    <p className="text-sm text-white/70 leading-relaxed">{service.description}</p>
                   </div>
                 </div>
               );
@@ -154,22 +163,20 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="values" className="space-y-10">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div className="space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-red-300">
-                Our promise
-              </p>
-              <h2 className="text-3xl font-semibold sm:text-4xl">What you can expect from every visit</h2>
-            </div>
+        <section id="values" className="space-y-8 md:space-y-10">
+          <div className="flex flex-col gap-3 md:gap-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-red-300">
+              Our promise
+            </p>
+            <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl">What you can expect from every visit</h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-5 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {siteConfig.values.map((value) => (
               <div
                 key={value.title}
-                className="rounded-3xl border border-white/10 bg-white/5 p-6 text-sm text-white/80 shadow-lg shadow-black/30"
+                className="rounded-3xl border border-white/10 bg-white/5 p-5 md:p-6 text-sm text-white/80 shadow-lg shadow-black/30"
               >
-                <h3 className="text-lg font-semibold text-white">{value.title}</h3>
+                <h3 className="text-base md:text-lg font-semibold text-white">{value.title}</h3>
                 <p className="mt-3 leading-relaxed">{value.description}</p>
               </div>
             ))}
@@ -178,21 +185,21 @@ export default function Home() {
 
         <section
           id="about"
-          className="overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-black/70 via-red-700/20 to-black/70 p-10 shadow-2xl shadow-black/50"
+          className="overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-black/70 via-red-700/20 to-black/70 p-6 md:p-10 shadow-2xl shadow-black/50"
         >
-          <div className="grid gap-10 md:grid-cols-[1fr_0.8fr] md:items-center">
-            <div className="space-y-6">
+          <div className="grid gap-8 md:gap-10 md:grid-cols-[1fr_0.8fr] md:items-center">
+            <div className="space-y-4 md:space-y-6">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-red-200">
                 Why we do this
               </p>
-              <h2 className="text-3xl font-semibold sm:text-4xl">Workmanship that reflects our faith</h2>
-              <p className="text-base text-white/80">
+              <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl">Workmanship that reflects our faith</h2>
+              <p className="text-sm md:text-base text-white/80 leading-relaxed">
                 Godwin Repair and Construction serves the community with practical skills and genuine care. Every project is approached with excellence—meeting needs while displaying integrity and dependable work.
               </p>
             </div>
-            <div className="space-y-6 rounded-3xl border border-white/10 bg-black/40 p-6 text-sm text-white/70 shadow-xl shadow-black/40">
+            <div className="space-y-4 md:space-y-6 rounded-3xl border border-white/10 bg-black/40 p-5 md:p-6 text-sm text-white/70 shadow-xl shadow-black/40">
               <p className="text-xs uppercase tracking-[0.3em] text-white/50">Guiding verse</p>
-              <p className="text-lg italic text-white/90">{siteConfig.scripture}</p>
+              <p className="text-base md:text-lg italic text-white/90 leading-relaxed">{siteConfig.scripture}</p>
               <p>
                 We pursue excellence in every detail, from the initial walk-through to the final cleanup. Our team communicates proactively, respects your schedule, and leaves each space better than we found it.
               </p>
@@ -201,16 +208,16 @@ export default function Home() {
         </section>
 
         <section
-          className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-10 text-white shadow-2xl shadow-black/50"
+          className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 md:p-10 text-white shadow-2xl shadow-black/50"
         >
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-semibold">Need help this week?</h2>
-              <p className="max-w-2xl text-base text-white/80">
-                Let us know what you need and we’ll respond within one business day with next steps. We can often accommodate evening or weekend projects to fit your schedule.
+          <div className="flex flex-col gap-5 md:gap-6 md:flex-row md:items-center md:justify-between">
+            <div className="space-y-3 md:space-y-4">
+              <h2 className="text-2xl font-semibold sm:text-3xl">Need help this week?</h2>
+              <p className="max-w-2xl text-sm md:text-base text-white/80 leading-relaxed">
+                Let us know what you need and we&apos;ll respond within one business day with next steps. We can often accommodate evening or weekend projects to fit your schedule.
               </p>
             </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
               <a
                 href={`tel:${siteConfig.contact.phone}`}
                 className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:border-white hover:bg-white/10"
@@ -227,31 +234,31 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="grid gap-10 md:grid-cols-[0.85fr_1fr]">
-          <div className="space-y-8">
+        <section id="contact" className="grid gap-8 md:gap-10 lg:grid-cols-[0.85fr_1fr]">
+          <div className="space-y-6 md:space-y-8">
             <div className="space-y-3">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-red-300">
                 Contact
               </p>
-              <h2 className="text-3xl font-semibold sm:text-4xl">Tell us about your project</h2>
-              <p className="text-base text-white/70">
-                Share a few details and we’ll reach out to schedule a walk-through or provide a quick estimate. Prefer to talk now? Call or text and we’ll pick up.
+              <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl">Tell us about your project</h2>
+              <p className="text-sm md:text-base text-white/70 leading-relaxed">
+                Share a few details and we&apos;ll reach out to schedule a walk-through or provide a quick estimate. Prefer to talk now? Call or text and we&apos;ll pick up.
               </p>
             </div>
-            <div className="space-y-4 rounded-3xl border border-white/10 bg-black/40 p-6 shadow-xl shadow-black/40">
+            <div className="space-y-4 rounded-3xl border border-white/10 bg-black/40 p-5 md:p-6 shadow-xl shadow-black/40">
               <div className="space-y-1">
                 <p className="text-xs uppercase tracking-[0.2em] text-white/50">Phone</p>
-                <a href={`tel:${siteConfig.contact.phone}`} className="block text-lg font-semibold text-white">
+                <a href={`tel:${siteConfig.contact.phone}`} className="block text-base md:text-lg font-semibold text-white hover:text-red-400 transition">
                   {siteConfig.contact.phone}
                 </a>
               </div>
               <div className="space-y-1">
                 <p className="text-xs uppercase tracking-[0.2em] text-white/50">Email</p>
-                <a href={`mailto:${siteConfig.contact.email}`} className="block text-lg font-semibold text-white">
+                <a href={`mailto:${siteConfig.contact.email}`} className="block text-base md:text-lg font-semibold text-white hover:text-red-400 transition break-all">
                   {siteConfig.contact.email}
                 </a>
               </div>
-              <p className="text-sm text-white/60">
+              <p className="text-xs md:text-sm text-white/60 leading-relaxed">
                 Serving homeowners, ministries, and local businesses with dependable help that fits your timeline.
               </p>
             </div>

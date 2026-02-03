@@ -57,43 +57,43 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/5 p-6 text-white shadow-2xl shadow-black/30 backdrop-blur"
+      className="flex flex-col gap-4 md:gap-5 rounded-3xl border border-white/10 bg-white/5 p-5 md:p-6 text-white shadow-2xl shadow-black/30 backdrop-blur"
     >
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="flex flex-col gap-2 text-sm font-medium uppercase tracking-wide text-white/70">
+        <label className="flex flex-col gap-2 text-xs md:text-sm font-medium uppercase tracking-wide text-white/70">
           Name
           <input
             name="name"
             type="text"
             placeholder="Full name"
             required
-            className="h-11 rounded-xl border border-white/10 bg-black/40 px-4 text-base text-white outline-none transition focus:border-white/40 focus:bg-black/60"
+            className="h-12 md:h-11 rounded-xl border border-white/10 bg-black/40 px-4 text-base text-white outline-none transition focus:border-white/40 focus:bg-black/60"
           />
         </label>
-        <label className="flex flex-col gap-2 text-sm font-medium uppercase tracking-wide text-white/70">
+        <label className="flex flex-col gap-2 text-xs md:text-sm font-medium uppercase tracking-wide text-white/70">
           Email
           <input
             name="email"
             type="email"
             placeholder="name@email.com"
             required
-            className="h-11 rounded-xl border border-white/10 bg-black/40 px-4 text-base text-white outline-none transition focus:border-white/40 focus:bg-black/60"
+            className="h-12 md:h-11 rounded-xl border border-white/10 bg-black/40 px-4 text-base text-white outline-none transition focus:border-white/40 focus:bg-black/60"
           />
         </label>
-        <label className="flex flex-col gap-2 text-sm font-medium uppercase tracking-wide text-white/70">
+        <label className="flex flex-col gap-2 text-xs md:text-sm font-medium uppercase tracking-wide text-white/70">
           Phone
           <input
             name="phone"
             type="tel"
             placeholder="417-771-6600"
-            className="h-11 rounded-xl border border-white/10 bg-black/40 px-4 text-base text-white outline-none transition focus:border-white/40 focus:bg-black/60"
+            className="h-12 md:h-11 rounded-xl border border-white/10 bg-black/40 px-4 text-base text-white outline-none transition focus:border-white/40 focus:bg-black/60"
           />
         </label>
-        <label className="flex flex-col gap-2 text-sm font-medium uppercase tracking-wide text-white/70">
+        <label className="flex flex-col gap-2 text-xs md:text-sm font-medium uppercase tracking-wide text-white/70">
           Project Type
           <select
             name="service"
-            className="h-11 rounded-xl border border-white/10 bg-black/40 px-4 text-base text-white outline-none transition focus:border-white/40 focus:bg-black/60"
+            className="h-12 md:h-11 rounded-xl border border-white/10 bg-black/40 px-4 text-base text-white outline-none transition focus:border-white/40 focus:bg-black/60"
           >
             <option value="">Select project type</option>
             <option value="General Repairs">General Repairs</option>
@@ -103,19 +103,19 @@ export function ContactForm() {
           </select>
         </label>
       </div>
-      <label className="flex flex-col gap-2 text-sm font-medium uppercase tracking-wide text-white/70">
+      <label className="flex flex-col gap-2 text-xs md:text-sm font-medium uppercase tracking-wide text-white/70">
         Project Details
         <textarea
           name="message"
           rows={4}
           placeholder="Share how we can help—timelines, details, and goals."
-          className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-base text-white outline-none transition focus:border-white/40 focus:bg-black/60"
+          className="rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-base text-white outline-none transition focus:border-white/40 focus:bg-black/60 min-h-[120px]"
         />
       </label>
       <button
         type="submit"
         disabled={disabled}
-        className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-red-600 px-5 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-red-900/50 transition hover:from-red-400 hover:to-red-500 disabled:cursor-not-allowed disabled:opacity-70"
+        className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-red-600 px-6 py-4 md:px-5 md:py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-red-900/50 transition hover:from-red-400 hover:to-red-500 disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === "submitting" ? "Sending..." : "Request a Project"}
       </button>
