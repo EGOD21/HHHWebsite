@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Admin - Godwin Repair</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Gallery Project Generator</h1>
+      <p>Fill out the form below to generate TypeScript code for a new gallery project</p>
+    </header>
+
+    <form id="projectForm">
+      <div class="form-group">
+        <label for="title">Project Title *</label>
+        <input type="text" id="title" required placeholder="e.g., Kitchen Remodel">
+      </div>
+
+      <div class="form-group">
+        <label for="category">Category *</label>
+        <select id="category" required>
+          <option value="">Select a category</option>
+          <option value="General Repairs">General Repairs</option>
+          <option value="Remodelling">Remodelling</option>
+          <option value="Upscale Projects">Upscale Projects</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description *</label>
+        <textarea id="description" required rows="3" placeholder="Brief description of the project"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="completedDate">Completion Date *</label>
+        <input type="date" id="completedDate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="images">Image Paths (one per line) *</label>
+        <textarea id="images" required rows="3" placeholder="/gallery/project-image-1.jpeg&#10;/gallery/project-image-2.jpeg"></textarea>
+        <small>Enter paths to images in /public/gallery/ directory</small>
+      </div>
+
+      <div class="form-group">
+        <label for="tags">Tags (comma-separated)</label>
+        <input type="text" id="tags" placeholder="kitchen, remodel, renovation">
+      </div>
+
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="featured">
+          Mark as Featured
+        </label>
+      </div>
+
+      <button type="submit">Generate Code</button>
+    </form>
+
+    <div id="output" class="output hidden">
+      <h2>Generated Code</h2>
+      <p>Copy this code and paste it into <code>/src/config/jobs.ts</code> in the jobs array:</p>
+      <pre><code id="generatedCode"></code></pre>
+      <button id="copyBtn">Copy to Clipboard</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

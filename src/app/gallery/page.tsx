@@ -1,22 +1,14 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { jobs, JobCategory } from '@/config/jobs';
-import JobFilter from '@/components/gallery/job-filter';
+import { jobs } from '@/config/jobs';
 import JobGrid from '@/components/gallery/job-grid';
 import { siteConfig } from '@/config/site';
 
 export default function GalleryPage() {
-  const [selectedCategory, setSelectedCategory] = useState<JobCategory | 'all'>('all');
-
-  const filteredJobs = selectedCategory === 'all'
-    ? jobs
-    : jobs.filter((job) => job.category === selectedCategory);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#050506] via-[#15060a] to-[#020102] text-white">
       <div className="pointer-events-none fixed inset-x-0 top-0 -z-10 mx-auto h-[40rem] max-w-5xl bg-[radial-gradient(circle,_rgba(255,0,0,0.15)_0%,_rgba(15,0,0,.0)_65%)]" />
@@ -37,17 +29,9 @@ export default function GalleryPage() {
           </div>
         </section>
 
-        {/* Filter bar */}
-        <section className="px-4">
-          <JobFilter
-            selectedCategory={selectedCategory}
-            onFilterChange={setSelectedCategory}
-          />
-        </section>
-
         {/* Job grid */}
         <section className="px-4">
-          <JobGrid jobs={filteredJobs} />
+          <JobGrid jobs={jobs} />
         </section>
 
         {/* CTA */}

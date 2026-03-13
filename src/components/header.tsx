@@ -39,8 +39,8 @@ export function Header() {
               priority
             />
           </div>
-          <span className="hidden text-lg font-semibold sm:block">
-            Godwin Repair
+          <span className="hidden text-lg font-semibold text-red-500 sm:block">
+            Godwin Repair and Construction
           </span>
         </Link>
         <nav className="hidden items-center gap-6 lg:flex">
