@@ -29,7 +29,7 @@ export function Header() {
     <header className="sticky inset-x-0 top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 text-sm sm:text-base">
         <Link href="/" className="flex items-center gap-3 group" onClick={closeMobileMenu}>
-          <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-black via-red-950/20 to-black border-2 border-white/30 ring-2 ring-red-500/20 shadow-[0_0_20px_rgba(239,68,68,0.5)] group-hover:shadow-[0_0_30px_rgba(239,68,68,0.8)] transition-all duration-300">
+          <div className="relative h-14 w-14 flex-shrink-0">
             <Image
               src="/hhh-logo.jpeg"
               alt="Godwin Repair and Construction logo"
@@ -39,7 +39,7 @@ export function Header() {
               priority
             />
           </div>
-          <span className="hidden text-lg font-semibold text-red-500 sm:block">
+          <span className="hidden text-sm font-semibold uppercase tracking-wide text-red-300 sm:block">
             Godwin Repair and Construction
           </span>
         </Link>

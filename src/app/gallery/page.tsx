@@ -1,14 +1,17 @@
-'use client';
-
 import Link from 'next/link';
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { jobs } from '@/config/jobs';
+import { getProjects } from '@/lib/projects';
 import JobGrid from '@/components/gallery/job-grid';
 import { siteConfig } from '@/config/site';
 
-export default function GalleryPage() {
+// Ensure this page is dynamically rendered
+export const dynamic = 'force-dynamic';
+
+export default async function GalleryPage() {
+  const jobs = await getProjects();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#050506] via-[#15060a] to-[#020102] text-white">
       <div className="pointer-events-none fixed inset-x-0 top-0 -z-10 mx-auto h-[40rem] max-w-5xl bg-[radial-gradient(circle,_rgba(255,0,0,0.15)_0%,_rgba(15,0,0,.0)_65%)]" />

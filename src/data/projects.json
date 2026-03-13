@@ -1,0 +1,22 @@
+[
+  {
+    "id": "door-installation",
+    "title": "Door Installation",
+    "category": "General Repairs",
+    "description": "Professional door installation with precision fitting and hardware setup.",
+    "images": ["/gallery/door-installation.jpeg"],
+    "completedDate": "2025-01-15",
+    "featured": true,
+    "tags": ["door", "installation", "hardware"]
+  },
+  {
+    "id": "kitchen-remodel",
+    "title": "Kitchen Remodel",
+    "category": "Remodelling",
+    "description": "Complete kitchen renovation featuring modern updates and quality craftsmanship.",
+    "images": ["/gallery/kitchen-remodel-1.jpeg", "/gallery/kitchen-remodel-2.jpeg"],
+    "completedDate": "2025-02-10",
+    "featured": true,
+    "tags": ["kitchen", "remodel", "renovation"]
+  }
+]
