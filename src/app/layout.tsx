@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 
 import "./globals.css";
 
-const baseUrl = "https://www.godwinrepair.com";
+const baseUrl = "https://www.repair-construction.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

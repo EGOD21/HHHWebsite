@@ -2,7 +2,7 @@
 const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:3000'
   : window.location.hostname.includes('admin')
-    ? 'https://highlands-handyhelp.vercel.app' // Your main site domain
+    ? 'https://www.repair-construction.com' // Your main site domain
     : window.location.origin; // If admin panel is hosted on main domain
 
 const status = document.getElementById('status');
